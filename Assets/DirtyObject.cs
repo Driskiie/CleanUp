@@ -10,6 +10,7 @@ public class DirtyObject : MonoBehaviour
     public GameObject DirtyObj;
     public GameObject CleanObj;
     public XRBaseInteractable interactable;
+    public AudioSource placed;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -19,6 +20,7 @@ public class DirtyObject : MonoBehaviour
             DirtySpot.SetActive(false);
             DirtyObj.SetActive(false);
             CleanObj.SetActive(true);
+            placed.Play();
         
         }
     }
